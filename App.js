@@ -8,16 +8,22 @@ import Settings from './pages/Settings';
 import MyCards from './pages/MyCards';
 import Statistics from './pages/Statistics';
 import { ThemeProvider, useTheme } from './components/ThemeProvider.jsx'
+// import { getThemeColor } from './utils/theme';
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  // const {isToggled} = useTheme()
+  // themeColor
+  // console.log(getThemeColor)
+
+  
 
   return (
     <ThemeProvider>
     <NavigationContainer> 
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{tabBarStyle: {backgroundColor:  '#0D0D26'}}}>
         <Tab.Screen name='Home' component={Home} options={{tabBarIcon: ({color, size}) => (
           <Image source={require("./assets/icons/home.png")} />
         ), headerShown: false}}/>
