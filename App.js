@@ -14,7 +14,6 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
 
-
   return (
     <ThemeProvider>
     <NavigationContainer> 
